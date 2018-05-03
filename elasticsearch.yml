@@ -1,0 +1,6 @@
+# ======================== Elasticsearch Configuration =========================
+# Forcing single-node mode to skip bootstrap checks:
+# https://www.elastic.co/guide/en/elasticsearch/reference/master/bootstrap-checks.html#_forcing_the_bootstrap_checks
+# /!\ NOT RECOMMENDED FOR PRODUCTION /!\
+
+discovery.type: single-node
