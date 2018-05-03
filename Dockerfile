@@ -1,8 +1,6 @@
 FROM openjdk:8-jre-slim
-EXPOSE 8090
-EXPOSE 8091
-EXPOSE 9200
-EXPOSE 9300
+EXPOSE 8090 8091
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 ADD ./camunda-optimize.zip /camunda-optimize.zip
 RUN unzip -d /opt/camunda-optimize camunda-optimize.zip 
 ADD ./start-optimize.sh /opt/camunda-optimize/start-optimize.sh
